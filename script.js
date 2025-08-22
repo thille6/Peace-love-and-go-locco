@@ -1,5 +1,37 @@
 // Initialisera AOS (Animate On Scroll) biblioteket
 document.addEventListener('DOMContentLoaded', function() {
+    // Lägg till en händelselyssnare för att spela musik efter användarinteraktion
+    document.addEventListener('click', function userInteractionHandler() {
+        // Försök spela bakgrundsmusiken efter användarinteraktion
+        const backgroundMusic = document.getElementById('background-music');
+        if (backgroundMusic) {
+            // Avmuta ljudet först
+            backgroundMusic.muted = false;
+            
+            // Uppdatera volymikonen om den finns
+            const volumeIcon = document.querySelector('.volume-icon');
+            if (volumeIcon) {
+                volumeIcon.textContent = '🔊';
+            }
+            
+            // Sätt volymen baserat på slider om den finns
+            const volumeSlider = document.getElementById('volume-slider');
+            if (volumeSlider) {
+                backgroundMusic.volume = volumeSlider.value / 100;
+            } else {
+                backgroundMusic.volume = 0.3; // Standard 30% volym
+            }
+            
+            backgroundMusic.play().then(() => {
+                console.log('Bakgrundsmusik startade efter användarinteraktion');
+            }).catch(error => {
+                console.log('Kunde inte starta bakgrundsmusik efter interaktion:', error);
+            });
+        }
+        // Ta bort händelselyssnaren efter första klicket
+        document.removeEventListener('click', userInteractionHandler);
+    }, { once: true });
+
     // Hantera bakgrundsmusik
     const backgroundMusic = document.getElementById('background-music');
     const volumeSlider = document.getElementById('volume-slider');
