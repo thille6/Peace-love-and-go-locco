@@ -1,0 +1,105 @@
+<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bakgrund -->
+  <rect width="1280" height="720" fill="#000"/>
+  
+  <!-- Stjärnor -->
+  <g id="stars">
+    <!-- Små stjärnor -->
+    <g fill="#FFF">
+      <circle cx="100" cy="100" r="1"/>
+      <circle cx="200" cy="150" r="1"/>
+      <circle cx="300" cy="200" r="1"/>
+      <circle cx="400" cy="250" r="1"/>
+      <circle cx="500" cy="300" r="1"/>
+      <circle cx="600" cy="350" r="1"/>
+      <circle cx="700" cy="400" r="1"/>
+      <circle cx="800" cy="450" r="1"/>
+      <circle cx="900" cy="500" r="1"/>
+      <circle cx="1000" cy="550" r="1"/>
+      <circle cx="1100" cy="600" r="1"/>
+      <circle cx="1200" cy="650" r="1"/>
+      <circle cx="150" cy="50" r="1"/>
+      <circle cx="250" cy="100" r="1"/>
+      <circle cx="350" cy="150" r="1"/>
+      <circle cx="450" cy="200" r="1"/>
+      <circle cx="550" cy="250" r="1"/>
+      <circle cx="650" cy="300" r="1"/>
+      <circle cx="750" cy="350" r="1"/>
+      <circle cx="850" cy="400" r="1"/>
+      <circle cx="950" cy="450" r="1"/>
+      <circle cx="1050" cy="500" r="1"/>
+      <circle cx="1150" cy="550" r="1"/>
+      <circle cx="1250" cy="600" r="1"/>
+    </g>
+    
+    <!-- Mellanstora stjärnor -->
+    <g fill="#FFF">
+      <circle cx="120" cy="80" r="2"/>
+      <circle cx="220" cy="130" r="2"/>
+      <circle cx="320" cy="180" r="2"/>
+      <circle cx="420" cy="230" r="2"/>
+      <circle cx="520" cy="280" r="2"/>
+      <circle cx="620" cy="330" r="2"/>
+      <circle cx="720" cy="380" r="2"/>
+      <circle cx="820" cy="430" r="2"/>
+      <circle cx="920" cy="480" r="2"/>
+      <circle cx="1020" cy="530" r="2"/>
+      <circle cx="1120" cy="580" r="2"/>
+      <circle cx="1220" cy="630" r="2"/>
+    </g>
+    
+    <!-- Stora stjärnor -->
+    <g fill="#FFF">
+      <circle cx="180" cy="120" r="3"/>
+      <circle cx="280" cy="170" r="3"/>
+      <circle cx="380" cy="220" r="3"/>
+      <circle cx="480" cy="270" r="3"/>
+      <circle cx="580" cy="320" r="3"/>
+      <circle cx="680" cy="370" r="3"/>
+      <circle cx="780" cy="420" r="3"/>
+      <circle cx="880" cy="470" r="3"/>
+      <circle cx="980" cy="520" r="3"/>
+      <circle cx="1080" cy="570" r="3"/>
+      <circle cx="1180" cy="620" r="3"/>
+    </g>
+  </g>
+  
+  <!-- Animerade stjärnor -->
+  <g>
+    <circle cx="500" cy="360" r="4" fill="#FFF">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="4" fill="#FFF">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="900" cy="300" r="4" fill="#FFF">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="400" r="4" fill="#FFF">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Nebulosa -->
+  <g opacity="0.3">
+    <ellipse cx="640" cy="360" rx="500" ry="300" fill="#3498db">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="15s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="640" cy="360" rx="400" ry="200" fill="#9b59b6">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Fallande stjärnor -->
+  <g>
+    <line x1="200" y1="100" x2="300" y2="200" stroke="#FFF" stroke-width="1">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="800" y1="150" x2="900" y2="250" stroke="#FFF" stroke-width="1">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="1100" y1="300" x2="1200" y2="400" stroke="#FFF" stroke-width="1">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" begin="5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+</svg>

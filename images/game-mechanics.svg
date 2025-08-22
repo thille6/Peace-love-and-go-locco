@@ -1,0 +1,60 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bakgrund -->
+  <rect width="600" height="400" fill="#1a1a2e"/>
+  
+  <!-- Rutnät för spelmekanik -->
+  <g stroke="#444" stroke-width="1">
+    <line x1="50" y1="50" x2="550" y2="50"/>
+    <line x1="50" y1="100" x2="550" y2="100"/>
+    <line x1="50" y1="150" x2="550" y2="150"/>
+    <line x1="50" y1="200" x2="550" y2="200"/>
+    <line x1="50" y1="250" x2="550" y2="250"/>
+    <line x1="50" y1="300" x2="550" y2="300"/>
+    <line x1="50" y1="350" x2="550" y2="350"/>
+    
+    <line x1="50" y1="50" x2="50" y2="350"/>
+    <line x1="150" y1="50" x2="150" y2="350"/>
+    <line x1="250" y1="50" x2="250" y2="350"/>
+    <line x1="350" y1="50" x2="350" y2="350"/>
+    <line x1="450" y1="50" x2="450" y2="350"/>
+    <line x1="550" y1="50" x2="550" y2="350"/>
+  </g>
+  
+  <!-- Spelmekanik-diagram -->
+  <!-- Noder -->
+  <circle cx="150" cy="100" r="20" fill="#3498db"/>
+  <circle cx="250" cy="150" r="20" fill="#e74c3c"/>
+  <circle cx="350" cy="100" r="20" fill="#2ecc71"/>
+  <circle cx="450" cy="150" r="20" fill="#f39c12"/>
+  <circle cx="150" cy="250" r="20" fill="#9b59b6"/>
+  <circle cx="250" cy="300" r="20" fill="#1abc9c"/>
+  <circle cx="350" cy="250" r="20" fill="#e67e22"/>
+  <circle cx="450" cy="300" r="20" fill="#34495e"/>
+  
+  <!-- Kopplingar -->
+  <g stroke="#fff" stroke-width="2">
+    <line x1="150" y1="100" x2="250" y2="150"/>
+    <line x1="250" y1="150" x2="350" y2="100"/>
+    <line x1="350" y1="100" x2="450" y2="150"/>
+    <line x1="150" y1="250" x2="250" y2="300"/>
+    <line x1="250" y1="300" x2="350" y2="250"/>
+    <line x1="350" y1="250" x2="450" y2="300"/>
+    <line x1="150" y1="100" x2="150" y2="250"/>
+    <line x1="250" y1="150" x2="250" y2="300"/>
+    <line x1="350" y1="100" x2="350" y2="250"/>
+    <line x1="450" y1="150" x2="450" y2="300"/>
+  </g>
+  
+  <!-- Etiketter -->
+  <text x="140" y="105" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Start</text>
+  <text x="250" y="155" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Action</text>
+  <text x="350" y="105" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Reward</text>
+  <text x="450" y="155" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Level</text>
+  <text x="150" y="255" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Items</text>
+  <text x="250" y="305" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Skills</text>
+  <text x="350" y="255" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Quest</text>
+  <text x="450" y="305" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Boss</text>
+  
+  <!-- Titel -->
+  <text x="300" y="30" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Game Mechanics Diagram</text>
+</svg>
