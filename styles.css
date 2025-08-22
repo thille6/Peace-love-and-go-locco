@@ -1,0 +1,411 @@
+/* Grundläggande stilar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f8f9fa; /* Skarpare vit färg för bättre WCAG-kontrast */
+    overflow-x: hidden;
+    background-color: #000;
+    position: relative;
+}
+
+/* Video bakgrund */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* Innehållscontainer */
+.content-container {
+    position: relative;
+    z-index: 1;
+    padding-top: 100vh; /* Börja innehållet efter första skärmen */
+}
+
+/* Header-sektion */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.title-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 90%;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* Ren vit för rubriker */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #f8f9fa; /* Skarpare vit färg */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+header .lead {
+    font-size: 1.8rem;
+    max-width: 800px;
+    color: #f8f9fa; /* Skarpare vit färg */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Volymkontroll */
+.volume-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 20px;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.volume-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 8px;
+    padding: 0;
+}
+
+.volume-icon {
+    font-style: normal;
+}
+
+#volume-slider {
+    width: 80px;
+    height: 5px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 5px;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: none;
+}
+
+/* Musik- och videoknapp */
+.music-play-button, .video-play-button {
+    position: fixed;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.music-play-button {
+    right: 20px;
+}
+
+.video-play-button {
+    left: 20px;
+}
+
+.music-play-button:hover, .video-play-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Innehållssektioner */
+.content-section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.content-section h3 {
+    color: #ffffff; /* Ren vit för rubriker */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+    margin-bottom: 1rem;
+}
+
+.content-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #ffffff; /* Ren vit för rubriker */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #f8f9fa; /* Skarpare vit färg */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+}
+
+/* Bakgrundsfärg för varannan sektion */
+.bg-translucent {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Video play-knapp (visas endast om autoplay misslyckas) */
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.video-play-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Bildcontainer */
+.image-container {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.02);
+}
+
+/* Kort stilar */
+.card {
+    background-color: rgba(30, 30, 30, 0.8);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    color: #f8f9fa; /* Skarpare vit färg */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Ren vit för rubriker */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Mörkare skugga för bättre kontrast */
+}
+
+/* Team Section */
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+}
+
+.team-img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+/* Acknowledgment-sektion */
+.acknowledgment-section {
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.7), rgba(138, 43, 226, 0.7));
+    padding: 4rem 0;
+    margin-top: 2rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.acknowledgment-title {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: #ffd700; /* Guld-färg */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.acknowledgment-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-style: italic;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.highlight-name {
+    font-weight: 700;
+    color: #ffd700; /* Guld-färg */
+    font-size: 1.4rem;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+    letter-spacing: 1px;
+    padding: 0 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(248, 249, 250, 0.9); /* Skarpare vit färg med högre opacitet för bättre läsbarhet */
+    padding: 2rem 0;
+}
+
+/* Responsiva justeringar */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    header .lead {
+        font-size: 1.2rem;
+    }
+    
+    .content-section {
+        padding: 4rem 0;
+    }
+    
+    .content-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .content-section {
+        padding: 3rem 0;
+    }
+    
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Scrollbar stilar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
